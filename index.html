@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demo v0.1 de la Plataforma de Soberanía Sanitaria — Vacunas en Colombia.">
+  <meta name="theme-color" content="#071d27">
+  <title>Soberanía Sanitaria · Demo v0.1</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script defer src="data/demo-v0.1.js"></script>
+  <script defer src="data/demo-v0.1-vaccines-01.js"></script>
+  <script defer src="data/demo-v0.1-vaccines-02.js"></script>
+  <script defer src="data/demo-v0.1-vaccines-03.js"></script>
+  <script defer src="data/demo-v0.1-vaccines-04.js"></script>
+  <script defer src="data/demo-v0.1-vaccines-05.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+
+
+<body>
+  <a class="skip-link" href="#main-content">Saltar al contenido</a>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <div class="brand">
+        <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true">
+          <path d="M22 3 38.5 12.5v19L22 41 5.5 31.5v-19L22 3Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="22" cy="22" r="5.2" fill="currentColor"/>
+          <circle cx="12.2" cy="16.4" r="2.3" fill="currentColor" opacity=".55"/>
+          <circle cx="31.8" cy="16.4" r="2.3" fill="currentColor" opacity=".55"/>
+          <path d="M14.3 17.5 18 19.7m12-2.2-4 2.2M22 27.2v6" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <div>
+          <span class="brand-kicker">Colombia · Vacunas</span>
+          <strong>Soberanía<br>Sanitaria</strong>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Áreas de la demo">
+        <a class="nav-item" href="#inicio" data-nav="inicio">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h6V4H4v9Zm0 7h6v-4H4v4Zm10 0h6v-9h-6v9Zm0-16v4h6V4h-6Z"/></svg>
+          <span>Inicio</span>
+        </a>
+        <a class="nav-item" href="#explorador" data-nav="explorador">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 4a6.5 6.5 0 1 0 3.94 11.67L19.77 21 21 19.77l-5.33-5.33A6.5 6.5 0 0 0 10.5 4Zm0 2a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Z"/></svg>
+          <span>Explorador</span>
+        </a>
+        <a class="nav-item" href="#historico" data-nav="historico">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 8.95 10H19a7 7 0 1 1-2.05-5L14 11h7V4l-2.63 2.63A8.96 8.96 0 0 0 12 3Zm-1 4v6h5v-2h-3V7h-2Z"/></svg>
+          <span>Histórico</span>
+          <span class="nav-state">Próximo</span>
+        </a>
+        <a class="nav-item" href="#capacidad" data-nav="capacidad">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 8 4v6c0 5.1-3.4 8.3-8 10-4.6-1.7-8-4.9-8-10V6l8-4Zm0 2.2L6 7.1V12c0 3.9 2.4 6.4 6 7.9 3.6-1.5 6-4 6-7.9V7.1l-6-2.9Zm-1 3.8h2v5h-2V8Zm0 7h2v2h-2v-2Z"/></svg>
+          <span>Capacidad nacional</span>
+          <span class="nav-state">Próximo</span>
+        </a>
+      </nav>
+
+      <div class="gate-card">
+        <span class="gate-dot" aria-hidden="true"></span>
+        <div>
+          <span>Corte científico</span>
+          <strong>Sprint 2 · Aprobado</strong>
+        </div>
+      </div>
+
+      <p class="sidebar-version">Demo v0.1 · Producto</p>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <button class="icon-button menu-button" type="button" aria-label="Abrir navegación" aria-controls="sidebar" aria-expanded="false" data-action="toggle-menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h16v2H4v-2Z"/></svg>
+        </button>
+        <div class="breadcrumb" aria-live="polite">
+          <span>Plataforma</span>
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <strong id="page-label">Inicio</strong>
+        </div>
+        <button class="evidence-button" type="button" data-action="open-evidence">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h11l3 3v15H5V3Zm2 2v14h10V7h-3V5H7Zm2 5h6v2H9v-2Zm0 4h6v2H9v-2Z"/></svg>
+          Evidencia y método
+        </button>
+      </header>
+
+      <main id="main-content" tabindex="-1">
+        <div id="app" aria-live="polite"></div>
+      </main>
+    </div>
+  </div> 
+
+  <dialog class="evidence-dialog" id="evidence-dialog" aria-labelledby="evidence-title">
+    <div class="dialog-header">
+      <div>
+        <span class="eyebrow">Trazabilidad</span>
+        <h2 id="evidence-title">Evidencia y método</h2>
+      </div>
+      <button class="icon-button" type="button" aria-label="Cerrar" data-action="close-evidence">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5Z"/></svg>
+      </button>
+    </div>
+    <div class="dialog-body" id="evidence-content"></div>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
